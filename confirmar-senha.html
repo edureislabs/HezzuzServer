@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar Nova Senha</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Definir Nova Senha</h2>
+    <form action="/trocar-senha" method="POST">
+
+      <input type="hidden" name="token" value="TOKEN_DO_BACKEND">
+
+      <input type="password" name="senha" placeholder="Nova senha" required>
+      <input type="password" name="confirmarSenha" placeholder="Confirmar nova senha" required>
+
+      <div class="recaptcha-placeholder">
+        <div class="g-recaptcha" data-sitekey="SUA_CHAVE_PUBLICA_RECAPTCHA"></div>
+      </div>
+
+      <button type="submit">Alterar Senha</button>
+    </form>
+  </div>
+</body>
+</html>

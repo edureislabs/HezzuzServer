@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirme o E-mail</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Confirme seu E-mail</h2>
+    <p>Digite o mesmo e-mail usado para solicitar a redefinição.</p>
+    <form action="/confirmar-email" method="POST">
+      <input type="hidden" name="token" value="TOKEN_VINDO_DO_LINK">
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <button type="submit">Continuar</button>
+    </form>
+  </div>
+</body>
+</html>
