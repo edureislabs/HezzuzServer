@@ -1,0 +1,136 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, orange, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+.nav-bar {
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    width: 20%;
+    border-radius: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-bar a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .nav-bar a:hover {
+    color: orange;
+  }
+  
+  .auth-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+  }
+  
+  /* Abas de seleção */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .tab.active {
+    color: orange;
+    border-bottom: 2px solid orange;
+  }
+  
+  /* Área dos formulários */
+  .forms-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Conteúdo dos formulários */
+  .form-content {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Esconde a seção quando necessário */
+  .hidden {
+    display: none;
+  }
+  
+  /* Estilos dos formulários */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+    padding: 12px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: darkorange;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid orange;
+  }
+  

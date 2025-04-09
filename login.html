@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <title>Autenticação - Hezzuz</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="./js/login.js" defer></script>
+</head>
+<body>
+    <nav class="nav-bar" id="navBar">
+        <a href="./index.html"><i class="bi bi-house-door"></i> Home</a>
+      </nav>
+      
+  <div class="auth-container">
+    <div class="tabs">
+      <button id="loginTab" class="tab active">Login</button>
+      <button id="cadastroTab" class="tab">Criar Conta</button>
+    </div>
+    <div class="forms-wrapper">
+      <!-- Formulário de Login -->
+      <div id="loginForm" class="form-content">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+          <input type="text" name="usuario" placeholder="E-mail ou Nickname" required>
+          <input type="password" name="senha" placeholder="Senha" required>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+      <!-- Formulário de Cadastro -->
+      <div id="cadastroForm" class="form-content hidden">
+        <h2>Criar Conta</h2>
+        <form action="/criar-conta" method="POST">
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <input type="text" name="usuario" placeholder="Seu nick do Minecraft" required>
+          <input type="password" name="senha" placeholder="Sua senha" required>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Hezzuz Server. Todos os direitos reservados.</p>
+  </footer>
+  
+</body>
+</html>

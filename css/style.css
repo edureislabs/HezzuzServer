@@ -1,0 +1,374 @@
+html, body {
+    overflow-x: hidden;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
+@keyframes pulsarImagem {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+
+@font-face {
+    font-family: falcone;
+    src: url("../fonts/MINECRAFT\ PE.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url("../fonts/rajad.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: orange;
+    width: 100vw;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navbar de informações */
+.info-navbar {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.info-itens-central {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-center {
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.info-navbar h1 {
+    font-family: falcone;
+    letter-spacing: 2px;
+    color: orange;
+    font-size: 2rem;
+}
+
+.info-navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.info-navbar a:hover {
+    color: #4CAF50;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+.logo-central {
+    position: relative;
+    width: 250px;
+    height: auto;
+    z-index: 1;
+    animation: pulsarImagem 6s ease-in-out infinite;
+}
+/* Navbar dentro da imagem (fixa na parte inferior) */
+.nav-bar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-bar a {
+    font-family: rajad, sans-serif;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar i {
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar a:nth-child(1):hover { color: #FF07FF; }
+.nav-bar a:nth-child(2):hover { color: #FF9800; }
+.nav-bar a:nth-child(3):hover { color: #2196F3; }
+.nav-bar a:nth-child(4):hover { color: #E91E63; }
+.nav-bar a:nth-child(5):hover { color: #ff9d00; }
+.nav-bar a:nth-child(6):hover { color: #4CAF50; }
+.nav-bar a:nth-child(7):hover { color: green; }
+.nav-bar a:nth-child(8):hover { color: #7289DA; }
+
+.status-jogadores {
+    position: absolute;
+    right: 10px;
+    top: 50%; /* posiciona a parte superior no meio */
+    transform: translateY(-50%); /* puxa ele metade da própria altura pra cima */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #000000a6;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.status-jogadores:hover {
+    color: orange;
+}
+
+.status-jogadores img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+.status-jogadores:hover {
+    transform: none !important;
+}
+
+.mensagem-copiado {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+/* Menu hamburguer */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 200;
+}
+.login-usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-usuario form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-usuario input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.login-usuario button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-usuario button:hover {
+    background-color: darkorange;
+}
+
+/* Discord */
+.discord-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    width: 100%;
+}
+
+.discord-widget {
+    width: 300px;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.discord-widget iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+.botao-login {
+    background-color: orange;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-login:hover {
+    background-color: darkorange;
+}
+
+
+/* Apresentação */
+.apresentacao-container {
+    background-color: #0d1b2a;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.apresentacao-container h2 {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.apresentacao-container p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Destaques */
+.destaques-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.destaque {
+    background-color: #112b3c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.destaque:hover {
+    transform: translateY(-5px);
+}
+
+.destaque .icone {
+    background-color: #00aaff;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.destaque h3 {
+    font-size: 1.5rem;
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+.destaque p {
+    font-size: 1rem;
+    color: #ddd;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid orange;
+  }
+  
