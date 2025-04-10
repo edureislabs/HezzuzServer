@@ -1,20 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <title>Autenticação - Hezzuz</title>
-  <link rel="stylesheet" href="./css/login.css">
-  <script src="./js/login.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hezzuz Server</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/loja.css">
+    <script src="./js/script.js" defer></script>
+    <script src="./js/playeronline.js" defer></script>
+    <script src="./server.js" defer></script>
 </head>
+
 <body>
-    <nav class="nav-bar" id="navBar">
-        <a href="./index.html"><i class="bi bi-house-door"></i> Home</a>
-      </nav>
-  <div class="auth-container">
-    <div class="tabs">
-      <button id="loginTab" class="tab active">Login</button>
-      <button id="cadastroTab" class="tab">Criar Conta</button>
-    </div>  
-    <div class="forms-wrapper">
+    <div class="container">
+        <img src="./imgs/banner.png" alt="bannerhezzuz" class="imagem-fundo">
+        <img src="./imgs/icon.png" alt="iconehezzuz" class="logo-central">
+
+        <!-- Navbar dentro da imagem (Parte inferior) -->
+        <nav class="nav-bar" id="navBar">
+            <div class="menu-close" onclick="toggleMenu()">✕</div>
+            <a href="./index.html"><i class="bi bi-house-door"></i>Home</a>
+            <a href="./loja.html"><i class="bi bi-shop"></i>Loja</a>
+            <a href="#"><i class="bi bi-file-earmark-text"></i>Regras</a>
+            <a href="#"><i class="bi bi-people"></i>Redes Sociais</a>
+            <a href="#"><i class="bi bi-unity"></i>Staff</a>
+            <a href="#"><i class="bi bi-check-circle"></i>Vote</a>
+            <a href="https://discord.hezzuz.com/" target="_blank">
+                <i class="bi bi-discord"></i> Discord
+            </a>
+            
+        </nav>
+    </div>
+    <a href="#" class="cart-floating">
+        <i class="bi bi-cart-fill"></i>
+      </a>
+    <div class="container-produtos-custom">
+        <div class="linha">
+          <div class="produto-card">
+            <span class="preco">R$ 15.00</span>
+            <img src="./imgs/15cash.jpg" alt="Pacote 15k">
+            <p>Pacote 15k de Cash</p>
+            <button class="btn-comprar">Comprar</button>
+            <div class="actions">
+              <i class="fa fa-pencil-alt"></i>
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+          <div class="produto-card">
+            <span class="preco">R$ 30.00</span>
+            <img src="./imgs/30cash.png" alt="Pacote 30k">
+            <p>Pacote 30k de Cash</p>
+            <button class="btn-comprar">Comprar</button>
+            <div class="actions">
+              <i class="fa fa-pencil-alt"></i>
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      
+        <div class="linha">
+          <div class="produto-card">
+            <span class="preco">R$ 50.00</span>
+            <img src="./imgs/50cash.png" alt="Pacote 50k">
+            <p>Pacote 50k de Cash</p>
+            <button class="btn-comprar">Comprar</button>
+            <div class="actions">
+              <i class="fa fa-pencil-alt"></i>
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+          <div class="produto-card">
+            <span class="preco">R$ 100.00</span>
+            <img src="./imgs/100cash.avif" alt="Pacote 100k">
+            <p>Pacote 100k de Cash</p>
+            <button class="btn-comprar">Comprar</button>
+            <div class="actions">
+              <i class="fa fa-pencil-alt"></i>
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      
+        <div class="linha linha-centralizada">
+          <div class="produto-card">
+            <span class="preco">R$ 150.00</span>
+            <img src="./imgs/150cash.jpg" alt="Pacote 150k">
+            <p>Pacote 150k de Cash</p>
+            <button class="btn-comprar">Comprar</button>
+            <div class="actions">
+              <i class="fa fa-pencil-alt"></i>
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </body>
+    </html>

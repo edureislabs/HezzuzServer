@@ -14,7 +14,29 @@ html, body {
     100% { transform: scale(1); }
 }
 
-
+@keyframes linhaRGB {
+    0% {
+      border-color: #ff0000;
+    }
+    50% {
+      border-color: #ff6600;
+    }
+    100% {
+      border-color: #ff0000;
+    }
+  }
+@keyframes bordaRGB {
+    0% {
+      border-color: #ff0000;
+    }
+    50% {
+      border-color: #ff6600;
+    }
+    100% {
+      border-color: #ff0000;
+    }
+  }
+  
 @font-face {
     font-family: falcone;
     src: url("../fonts/MINECRAFT\ PE.ttf") format("truetype");
@@ -44,7 +66,12 @@ body {
     position: relative;
     font-family: Arial, sans-serif;
 }
-
+.linha {
+    border-top: 2px solid #ff0000; /* cor inicial */
+    width: 100%;
+    animation: linhaRGB 3s infinite alternate;
+  }
+  
 
 /* Navbar de informações */
 .info-navbar {
@@ -124,7 +151,7 @@ body {
     z-index: 1;
     animation: pulsarImagem 6s ease-in-out infinite;
 }
-/* Navbar dentro da imagem (fixa na parte inferior) */
+
 .nav-bar {
     position: absolute;
     bottom: 0;
@@ -136,8 +163,14 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     width: 90%;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     flex-wrap: wrap;
+    border-bottom: none;
+    border-top: 3px solid #ff0000;
+    border-left: 3px solid #ff0000;
+    border-right: 3px solid #ff0000;
+    
+    animation: bordaRGB 3s infinite alternate;
 }
 
 .nav-bar a {
